@@ -1,0 +1,38 @@
+
+<section class="hero is-success is-small">
+  <!-- Hero head: will stick at the top -->
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item">
+    <h1> Attendy Web <h1/>
+    </a>
+
+ </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      
+      <%# <%= link_to "Home", notes_path, class: "navbar-item" %>
+      <%# <%= link_to "Attendance", attendances_path, class: "navbar-item" %>
+      <%# <%= link_to "Students", students_path, class: "navbar-item" %>
+      <%# <%= link_to "Teachers", users_path, class: "navbar-item" %>
+      <%= link_to "Lectures", lectures_path, class: "navbar-item" %>
+        
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+        
+          <%= link_to 'Sign up', new_user_registration_path, class:"button is-black" %>
+          <%= link_to 'Sign in', user_session_path, class:"button is-light" %>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+</section>

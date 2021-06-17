@@ -6,7 +6,8 @@ class CreateLectures < ActiveRecord::Migration[6.1]
       t.integer :classroom_number
       t.time :duration
 
-      t.timestamps
+      
+  
     end
   end
 end

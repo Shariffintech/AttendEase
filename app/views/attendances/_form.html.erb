@@ -1,0 +1,37 @@
+<%= form_with(model: attendance) do |form| %>
+  <% if attendance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(attendance.errors.count, "error") %> prohibited this attendance from being saved:</h2>
+
+      <ul>
+        <% attendance.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :student_name %>
+    <%= form.text_field :student_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :classroom_number %>
+    <%= form.number_field :classroom_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :student_id_id %>
+    <%= form.number_field :student_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lecture_name %>
+    <%= form.text_field :lecture_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

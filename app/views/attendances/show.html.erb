@@ -1,0 +1,29 @@
+<div class="container" style="margin-top: 10px">
+
+  <h1> Attendance Log </h1>
+  <br>
+  <p>
+    <strong>Student name: </strong>
+    <%= @attendance.student_name %>
+  </p>
+
+  <p>
+    <strong>Student ID: </strong>
+    <%= @attendance.student_id %>
+  </p>
+
+  <p>
+    <strong>Number of Tardiness: </strong>
+    <%= "Feature coming soon" %>
+  </p>
+  
+  <br>
+  <br>
+
+
+
+
+  <%= link_to 'Edit', edit_attendance_path(@attendance) %> |
+  <%= link_to 'Back', attendances_path %>
+
+</div>

@@ -1,0 +1,37 @@
+<% if user_signed_in? %>
+<div class="container" style="margin-top: 15px">
+  <h2> Attendance Logs </h2>
+
+  <br>
+
+  <table class="table" width="50%">
+
+    <thead>
+        <td>Student Name </td>
+        <td>Student ID </td>
+        <td>Status</td>
+
+    </thead>
+
+    <tbody>
+      <% @attendances.each do |attendance| %>
+        <tr>
+          <td><%= attendance.student_name %></td>
+          <td><%= attendance.student_id %></td>
+          <td><%= "Present" %></td>
+          <td><%= link_to 'View', attendance, class:"button is-light" %></td>
+          <td><%= link_to 'Edit', edit_attendance_path(attendance), class:"button is-light" %></td>
+          <td><%= link_to 'Delete log', attendance, method: :delete, data: { confirm: 'Are you sure?' }, class:"button is-dark" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'Create new attendance', new_attendance_path, class:"button is-light" %>
+  <% else %>
+    <%= link_to "Please Sign in", signin_path %> 
+    <br/>
+  <% end %>
+</div>

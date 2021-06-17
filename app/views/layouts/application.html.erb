@@ -8,12 +8,24 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
   </head>
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
   <body>
+  <div class="container" width="100%">
+  <%= render "layouts/navigation" %>
     <%= yield %>
+     <br>
+        <br>
+      <% if user_signed_in? %>
+        
+        <%= link_to 'Sign out', destroy_user_session_path, class:"button is-light" %>
+        
+      <% end %>
+
+      </div>
   </body>
 </html>

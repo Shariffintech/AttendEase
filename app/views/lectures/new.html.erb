@@ -1,2 +1,5 @@
-<h1>Lectures#new</h1>
-<p>Find me in app/views/lectures/new.html.erb</p>
+<h1>Add a new lecture</h1>
+
+<%= render 'form', lecture: @lecture %>
+
+<%= link_to 'Back', lectures_path %>

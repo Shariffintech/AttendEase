@@ -20,13 +20,22 @@ gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
+
+gem "omniauth-rails_csrf_protection"
 
 gem 'therubyracer'
 gem 'devise'
 gem 'omniauth'
-gem 'omniauth-google'
+gem 'omniauth-google-oauth2'
 gem 'omniauth-twitter'
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'bootstrap-social-rails'
+
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

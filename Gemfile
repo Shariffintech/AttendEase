@@ -32,9 +32,11 @@ gem 'omniauth-twitter'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'bootstrap-social-rails'
 
+
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
+  gem 'pry-rails'
 end
 
 # Use Active Storage variant

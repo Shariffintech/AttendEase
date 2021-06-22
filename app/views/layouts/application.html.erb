@@ -11,11 +11,13 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
   </head>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
   <body>
   <div class="container" width="100%">
+  <% if flash.any? %>
+      <% flash.each do |key, value| -%>
+        <section class="flash flash__<%= key %>"><%= value.html_safe %></section>
+      <% end -%>
+    <% end %>
   <%= render "layouts/navigation" %>
     <%= yield %>
      <br>

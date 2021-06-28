@@ -1,0 +1,33 @@
+<% if user_signed_in? %>
+<div class="container" style="margin-top: 15px">
+  <h2>Student Catelog</h2>
+  <br>
+
+  <table class="table" width="75%">
+
+    <thead>
+            <th> Student Name </th>
+            <th> Student ID </th>
+    </thead>
+  
+
+    <tbody>
+      <% @students.each do |student| %>
+        <tr>
+          <td><%= student.student_name %></td>
+          <td><%= student.id%></td>
+          <td><%= link_to 'Edit', edit_student_path(student), class:"button is-light" %></td>
+          <td><%= link_to 'Delete',student, method: :delete, data: { confirm: 'Are you sure? This will remove this student for all teachers' }, class:"button is-dark" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+ 
+
+  <br>
+
+    <%= link_to 'New student', new_student_path, class:"button is-light" %>
+  <% else %>
+    <%= link_to "Please Sign in", user_session_path %><br />
+  <% end %>
+</div>

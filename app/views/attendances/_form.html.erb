@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :lecture_name %>
+    <%= form.text_field :lecture_name %>
+  </div>
+
+  <div class="field">
     <%= form.label :student_name %>
     <%= form.text_field :student_name %>
   </div>
@@ -27,9 +32,10 @@
   </div>
 
   <div class="field">
-    <%= form.label :lecture_name %>
-    <%= form.text_field :lecture_name %>
+    <%= form.label :status %>
+    <%= form.text_field :status %>
   </div>
+
 
   <div class="actions">
     <%= form.submit %>

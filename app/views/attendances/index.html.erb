@@ -4,10 +4,12 @@
 
   <br>
 
-  <table class="table" width="50%">
+  <table class="table" width="75%">
 
     <thead>
+
         <td>Student Name </td>
+
         <td>Student ID </td>
         <td>Status</td>
 
@@ -18,7 +20,7 @@
         <tr>
           <td><%= attendance.student_name %></td>
           <td><%= attendance.student_id %></td>
-          <td><%= "Present" %></td>
+          <td><%= attendance.status %></td>
           <td><%= link_to 'View', attendance, class:"button is-light" %></td>
           <td><%= link_to 'Edit', edit_attendance_path(attendance), class:"button is-light" %></td>
           <td><%= link_to 'Delete log', attendance, method: :delete, data: { confirm: 'Are you sure?' }, class:"button is-dark" %></td>

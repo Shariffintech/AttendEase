@@ -9,7 +9,7 @@
             <th> Lecture Name </th>
             <th> Classroom # </th>
             <th> Lecture ID </th>
-            <th> Created by </th>
+
     </thead>
   
 
@@ -19,7 +19,6 @@
           <td><%= lecture.name %></td>
           <td><%= lecture.classroom_number %></td>
           <td><%= lecture.id%></td>
-          <td><%= lecture.user_id%> </td>
           <td><%= link_to 'Edit', edit_lecture_path(lecture), class:"button is-light" %></td>
           <td><%= link_to 'Delete',lecture, method: :delete, data: { confirm: 'Are you sure? This will remove this lecture for all teachers' }, class:"button is-dark" %></td>
         </tr>

@@ -1,3 +1,8 @@
 class Lecture < ApplicationRecord
-    has_many :attendances, -> { order(created_at: :desc) }
+    belongs_to :attendances, :inverse_of => :lectur
+    validates_presence_of :attendances
 end
+
+
+# user -> teacher -> student[student_id]
+# lecture[lecture_id] -> attendance[student_id, lecture_id]

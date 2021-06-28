@@ -1,8 +1,9 @@
 class User < ApplicationRecord
   has_secure_password
-  # has_many :students, through: :teachers
+  has_many :teachers
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  accepts_nested_attributes_for :teachers
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2]
 

@@ -8,7 +8,7 @@ class LecturesController < ApplicationController
 
   # GET /lectures/1 or /lectures/1.json
   def show
-    @lecture = Lecture.find(params[:id])
+    set_lecture
   end
 
   # GET /lectures/new
@@ -18,7 +18,8 @@ class LecturesController < ApplicationController
 
   # GET /lectures/1/edit
   def edit
-    @lecture = Lecture.find(params[:id])
+    set_lecture
+    @lecture.attendance
   end
 
   # POST /lectures or /lectures.json

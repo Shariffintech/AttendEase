@@ -3,16 +3,12 @@ class AttendancesController < ApplicationController
    
      # GET /attendances or /attendances.json
      def index
-     
-       if @attendances = nil
-         render :create
-       else 
-         @attendances = Attendance.all
-       end
+      @attendances = Attendance.all
      end
    
      # GET /attendances/1 or /attendances/1.json
      def show
+      @attendance = Attendance.find(params[:id])
      end
    
      # GET /attendances/new
@@ -70,7 +66,7 @@ class AttendancesController < ApplicationController
    
        # Only allow a list of trusted parameters through.
        def attendance_params
-         params.require(:attendance).permit(:student_name, :student_id)
+         params.require(:attendance).permit(:student_name, :student_id, :status)
        end
    end
    

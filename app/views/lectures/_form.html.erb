@@ -11,22 +11,36 @@
         </ul>
       </div>
     <% end %>
+
   <br>
     <div class="field">
       <%= form.label :Lecture_name %>
       <%= form.text_field :name %>
     </div>
+    <div class="field">
+        <%= form.label :classroom_number %>
+        <%= form.number_field :classroom_number %>
+    </div>
 
     <div class="field">
-      <%= form.label :classroom_number %>
-      <%= form.number_field :classroom_number %>
+      <%= form.label :duration_in_minutes %>
+      <%= form.time_field :duration, 
+      value: "%M",
+      min: 'hh:mm:ss',
+      max: 'hh:mm:ss' %>
+      
     </div>
+    <p>
+    <div class="field">
+      <%= form.label :description %>
+      <%= form.text_field :description %>
+    </div>
+    </p>
 
     <div class="field">
       <%= form.label :lecture__id_id %>
       <%= form.number_field :id %>
     </div>
-
 
     <div class="actions">
       <%= form.submit %>

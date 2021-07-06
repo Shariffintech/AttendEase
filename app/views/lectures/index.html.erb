@@ -8,6 +8,8 @@
     <thead>
             <th> Lecture Name </th>
             <th> Classroom # </th>
+            <th> Lecture Duration (min)</th>
+            <th> Lecture Description </th>
             <th> Lecture ID </th>
 
     </thead>
@@ -18,6 +20,8 @@
         <tr>
           <td><%= lecture.name %></td>
           <td><%= lecture.classroom_number %></td>
+          <td><%= lecture.duration %></td>
+          <td><%= lecture.description %></td>
           <td><%= lecture.id%></td>
           <td><%= link_to 'Edit', edit_lecture_path(lecture), class:"button is-light" %></td>
           <td><%= link_to 'Delete',lecture, method: :delete, data: { confirm: 'Are you sure? This will remove this lecture for all teachers' }, class:"button is-dark" %></td>

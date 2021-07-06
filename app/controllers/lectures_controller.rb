@@ -19,7 +19,7 @@ class LecturesController < ApplicationController
   # GET /lectures/1/edit
   def edit
     set_lecture
-    @lecture.attendance
+    @lecture.attendances
   end
 
   # POST /lectures or /lectures.json
@@ -67,7 +67,7 @@ class LecturesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def lecture_params
-      params.require(:lecture).permit(:name, :classroom_number, :id)
+      params.require(:lecture).permit(:name, :classroom_number, :id, :description, :duration)
     end
 
     # def self_columns

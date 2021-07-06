@@ -1,4 +1,4 @@
 class Attendance < ApplicationRecord
-    has_many :lectures, inverse_of: :attendances
-    accepts_nested_attributes_for :lectures
+    belongs_to :lectures
+    validates :lectures, presence: true
 end

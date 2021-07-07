@@ -1,4 +1,6 @@
-<%= form_with(model: attendance) do |form| %>
+<%= form_with(model: [@lecture, attendance], local: true) do |form| %>
+
+
   <% if attendance.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(attendance.errors.count, "error") %> prohibited this attendance from being saved:</h2>
@@ -13,12 +15,14 @@
 
   <div class="field">
     <%= form.label :lecture_name %>
-    <%= form.text_field :lecture_name %>
+    <%= form.text_field :lecture_name,value: @lecture.name, disabled: true %>
+    <%= form.hidden_field :lecture_id,value: @lecture.id %>
   </div>
 
   <div class="field">
     <%= form.label :student_name %>
-    <%= form.text_field :student_name %>
+    <%= form.select :student_id, options_from_collection_for_select(Student.all, 'id', 'student_name') %>
+ 
   </div>
 
   <div class="field">

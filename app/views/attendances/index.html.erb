@@ -20,9 +20,11 @@
           <td><%= attendance.student_name %></td>
           <td><%= attendance.student_id %></td>
           <td><%= attendance.status %></td>
-          <td><%= link_to 'View', attendance, class:"button is-light" %></td>
-          <td><%= link_to 'Edit', edit_attendance_path(attendance), class:"button is-light" %></td>
-          <td><%= link_to 'Delete log', attendance, method: :delete, data: { confirm: 'Are you sure?' }, class:"button is-dark" %></td>
+          <td><%= @lecture.attendances.name %></td>
+          <td><%= link_to 'View Attendance Log', lecture_attendance_path(@lecture.id, attendance), class:"button is-light" %></td>
+          <td><%= link_to 'Show lecture', [@lecture], class:"button is-light"%></td>
+          <td><%= link_to 'Edit', edit_lecture_attendance_path(@lecture, attendance), class:"button is-light" %></td>
+          <td><%= link_to 'Delete log', lecture_attendance_path(@lecture, attendance), method: :delete, data: { confirm: 'Are you sure?' }, class:"button is-dark" %></td>
         </tr>
       <% end %>
     </tbody>
@@ -30,7 +32,7 @@
 
   <br>
 
-  <%= link_to 'Create new attendance', new_attendance_path, class:"button is-light" %>
+  <%= link_to 'Create new attendance', new_lecture_attendance_path(@lecture), class:"button is-light" %>
   <% else %>
     <%= link_to "Please Sign in", signin_path %> 
     <br/>

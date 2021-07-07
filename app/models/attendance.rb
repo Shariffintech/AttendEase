@@ -1,4 +1,5 @@
 class Attendance < ApplicationRecord
-    belongs_to :lectures
-    validates :lectures, presence: true
+    belongs_to :lecture, foreign_key: :lectures_id
+    belongs_to :student
+    validates :lecture, presence: true
 end

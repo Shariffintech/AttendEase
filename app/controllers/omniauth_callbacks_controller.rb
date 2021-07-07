@@ -1,18 +1,21 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # before_action :new
-  # skip_before_action :verify_authenticity_token, only: :create
+  
+  skip_before_action :verify_authenticity_token, only: :create
 
 #Devise has a SessionsController natively so dont need to create it.
 
 # Setting a method for all providers if multi-providers
   def all
+
     user = User.from_omniauth(request.env["omniauth.auth"])
     if user.persisted?
     sign_in_and_redirect user, notice: "Sign in!"
     else 
+      user.save!
       #persisting user attributes when validations fail
       session["devise.user_attributes"] =  user.attributes
-      redirect_to new_user_registration_url
+      sign_in_and_redirect user
     end
   end
 

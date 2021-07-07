@@ -11,6 +11,7 @@
             <th> Lecture Duration (min)</th>
             <th> Lecture Description </th>
             <th> Lecture ID </th>
+            <th> Attendance <th>
 
     </thead>
   
@@ -23,6 +24,7 @@
           <td><%= lecture.duration %></td>
           <td><%= lecture.description %></td>
           <td><%= lecture.id%></td>
+          <td><%= link_to 'View Attendance', lecture_attendances_path(lecture),class:"button is-light" %></td>
           <td><%= link_to 'Edit', edit_lecture_path(lecture), class:"button is-light" %></td>
           <td><%= link_to 'Delete',lecture, method: :delete, data: { confirm: 'Are you sure? This will remove this lecture for all teachers' }, class:"button is-dark" %></td>
         </tr>

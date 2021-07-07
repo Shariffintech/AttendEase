@@ -7,8 +7,11 @@ Rails.application.routes.draw do
   end
   root 'lectures#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :lectures
-  resources :attendances
+  resources :lectures do
+    resources :attendances
+  end
+
   resources :students
   resources :teachers
+  
 end

@@ -6,6 +6,6 @@ Attendy allows teachers to use CRUD functions to update a students information, 
 
 Teachers should be able to make changes only to their lectures.
 
-Students will not be able to log-in.
+Students will not be able to log-in, this platform is for teachers only.
 
 * ...

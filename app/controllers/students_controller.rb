@@ -4,6 +4,8 @@ class StudentsController < ApplicationController
   # GET /students or /students.json
   def index
     @students = Student.all
+    Student.order(:student_name)
+   
   end
 
   # GET /students/1 or /students/1.json

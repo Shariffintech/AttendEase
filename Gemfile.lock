@@ -313,7 +313,7 @@ DEPENDENCIES
   omniauth-google-oauth2
   omniauth-rails_csrf_protection
   omniauth-twitter
-  pg (~> 1.1)
+  pg (~> 1.2.3)
   pry-rails
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
@@ -332,4 +332,4 @@ RUBY VERSION
    ruby 2.6.1p33
 
 BUNDLED WITH
-   2.0.1
+   2.2.22

@@ -37,3 +37,5 @@ yarn-debug.log*
 
 #Ingore provider auth keys
 /.env
+
+/config

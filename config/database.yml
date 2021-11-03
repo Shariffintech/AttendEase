@@ -20,6 +20,9 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  database: rails_attendyWebapp_test
+  username: sharifs_attendyWebapp
+  password: swesharif27
 
 development:
   <<: *default
@@ -83,4 +86,4 @@ production:
   <<: *default
   database: rails_attendyWebapp_production
   username: sharifs_attendyWebapp
-  password: <%= ENV['RAILS_ATTENDYWEBAPP_DATABASE_PASSWORD'] %>
+  password: <%= ENV['RAILS_ATTENDYWEBAPP_DATABASE_PASSWORD'] %> 

@@ -1,6 +1,7 @@
 class User < ApplicationRecord
+  enum role: {teacher: 0, student: 1}
   has_many :teachers, foreign_key: :user_id
-  enum role: [:teacher, :student]
+  
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   accepts_nested_attributes_for :teachers

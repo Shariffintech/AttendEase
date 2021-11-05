@@ -25,6 +25,12 @@ class StudentsController < ApplicationController
 
   # POST /students or /students.json
   def create
+    #CREATE A STUDENT AS CURRENT USER
+    
+
+
+
+
     @student = Student.new(student_params)
     @student.save
     respond_to do |format|

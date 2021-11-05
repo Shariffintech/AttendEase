@@ -21,7 +21,8 @@
 
   <div class="field">
     <%= form.label :student_name %>
-    <%= form.select :student_id, options_from_collection_for_select(Student.all, 'id', 'student_name') %>
+    <%= form..text_field :student_name %>
+    # select :student_id, options_from_collection_for_select(Student.all, 'id', 'student_name') %>
  
   </div>
 

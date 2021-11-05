@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  enum role: {teacher: 0, student: 1}
+  enum role: {Teacher: 0, Admin: 1}
   has_many :teachers, foreign_key: :user_id
   
   # Include default devise modules. Others available are:

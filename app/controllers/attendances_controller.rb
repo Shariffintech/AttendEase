@@ -24,6 +24,8 @@ class AttendancesController < ApplicationController
      # POST /attendances or /attendances.json
      def create
        @attendance = @lecture.attendances.build(attendance_params)
+       # create an attendance for each student in the lecture with the user role = 0
+       # @attendance = @lecture.attendances.build(attendance_params[user_id: current_user.id, user_role: 0])
 
    
        respond_to do |format|

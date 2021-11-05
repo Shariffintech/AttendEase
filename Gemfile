@@ -23,8 +23,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
 
 gem "omniauth-rails_csrf_protection"
-
-gem 'therubyracer', platforms: :ruby
+# gem 'execjs'
+# gem 'therubyracer'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'

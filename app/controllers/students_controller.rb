@@ -3,9 +3,12 @@ class StudentsController < ApplicationController
 
   # GET /students or /students.json
   def index
-    @students = Student.all
-    Student.order(:student_name)
-   
+  
+    if current_user == nil
+      redirect_to users_sign_in_path
+    else
+      @students = Student.where(user_id: current_user.id).order(:student_name => :asc)
+    end
   end
 
   # GET /students/1 or /students/1.json
@@ -26,12 +29,8 @@ class StudentsController < ApplicationController
   # POST /students or /students.json
   def create
     #CREATE A STUDENT AS CURRENT USER
-    
-
-
-
-
     @student = Student.new(student_params)
+    @student.user = current_user
     @student.save
     respond_to do |format|
       if @student.save

@@ -4,7 +4,7 @@ class LecturesController < ApplicationController
   # GET /lectures or /lectures.json
   def index
     if current_user == nil
-      redirect_to signin_path
+      redirect_to users_sign_in_path
     else
       @lectures = Lecture.teachers_lectures(current_user)
     end
@@ -29,6 +29,7 @@ class LecturesController < ApplicationController
   # POST /lectures or /lectures.json
   def create
     @lecture = Lecture.new(lecture_params)
+    @lecture.user = current_user
     @lecture.save
     respond_to do |format|
       if @lecture.save

@@ -1,10 +1,10 @@
 class User < ApplicationRecord
   enum role: {Teacher: 0, Admin: 1}
-  has_many :teachers, foreign_key: :user_id
+  has_many :students
   
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  accepts_nested_attributes_for :teachers
+  accepts_nested_attributes_for :students
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2]
 

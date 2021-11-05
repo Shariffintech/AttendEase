@@ -3,7 +3,11 @@ class LecturesController < ApplicationController
 
   # GET /lectures or /lectures.json
   def index
-    @lectures = Lecture.teachers_lectures(current_user)
+    if current_user == nil
+      redirect_to signin_path
+    else
+      @lectures = Lecture.teachers_lectures(current_user)
+    end
   end
 
   # GET /lectures/1 or /lectures/1.json

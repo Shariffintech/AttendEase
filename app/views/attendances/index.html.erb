@@ -11,7 +11,6 @@
         <td>Student Name </td>
         <td>Student ID </td>
         <td>Status</td>
-        <td>Lecture Name</td>
 
     </thead>
 
@@ -21,7 +20,6 @@
           <td><%= attendance.student_name %></td>
           <td><%= attendance.student_id %></td>
           <td><%= attendance.status %></td>
-          <td><%= @lecture.attendances.name %></td>
           <td><%= link_to 'View Attendance Log', lecture_attendance_path(@lecture.id, attendance), class:"button is-light" %></td>
           <td><%= link_to 'Show lecture', [@lecture], class:"button is-light"%></td>
           <td><%= link_to 'Edit', edit_lecture_attendance_path(@lecture, attendance), class:"button is-light" %></td>

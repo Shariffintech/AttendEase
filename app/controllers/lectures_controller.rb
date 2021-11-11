@@ -1,6 +1,7 @@
 class LecturesController < ApplicationController
   before_action :set_lecture, only: %i[ show edit update destroy ]
 
+
   # GET /lectures or /lectures.json
   def index
     if current_user == nil
@@ -8,11 +9,16 @@ class LecturesController < ApplicationController
     else
       @lectures = Lecture.teachers_lectures(current_user)
     end
+
+  end
+
+  def most_popular
+      @lectures = Lecture.most_popular_lectures
   end
 
   # GET /lectures/1 or /lectures/1.json
   def show
-    set_lecture
+ 
   end
 
   # GET /lectures/new
@@ -65,9 +71,10 @@ class LecturesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    
     def set_lecture
       @lecture = Lecture.find(params[:id])
+   
     end
 
     # Only allow a list of trusted parameters through.

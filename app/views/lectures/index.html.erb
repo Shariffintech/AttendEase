@@ -23,7 +23,7 @@
           <td><%= lecture.classroom_number %></td>
           <td><%= lecture.duration %></td>
           <td><%= lecture.description %></td>
-          <td><%= lecture.id%></td>
+          <td><%= lecture.id %></td>
           <td><%= link_to 'View Attendance', lecture_attendances_path(lecture),class:"button is-light" %></td>
           <td><%= link_to 'Edit', edit_lecture_path(lecture), class:"button is-light" %></td>
           <td><%= link_to 'Delete',lecture, method: :delete, data: { confirm: 'Are you sure? This will remove this lecture for all teachers' }, class:"button is-dark" %></td>
@@ -36,6 +36,7 @@
   <br>
 
     <%= link_to 'New Lecture', new_lecture_path, class:"button is-light" %>
+    <%= link_to 'Most Popular Lecture', lectures_most_popular_path, class:"button is-light"%>
   <% else %>
     <%= link_to "Please Sign in", user_session_path %><br />
   <% end %>

@@ -7,9 +7,13 @@ Rails.application.routes.draw do
   end
   root 'lectures#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
+  match 'lectures/most_popular', to: 'lectures#most_popular', via: 'get'
+
   resources :lectures do
     resources :attendances
   end
+
 
   resources :students
   resources :teachers

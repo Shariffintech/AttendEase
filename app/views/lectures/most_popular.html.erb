@@ -1,0 +1,43 @@
+<% if user_signed_in? %>
+<div class="container" style="margin-top: 15px">
+  <h2>Most popular Lecture</h2>
+  <br>
+
+  <table class="table" width="75%">
+
+    <thead>
+            <th> Lecture Name </th>
+            <th> Classroom # </th>
+            <th> Lecture Duration (min)</th>
+            <th> Lecture Description </th>
+            <th> Lecture ID </th>
+            <th> Attendance <th>
+
+    </thead>
+  
+
+    <tbody>
+      <% @lectures.each do |lecture| %>
+        <tr>
+          <td><%= lecture.name %></td>
+          <td><%= lecture.classroom_number %></td>
+          <td><%= lecture.duration %></td>
+          <td><%= lecture.description %></td>
+          <td><%= lecture.id %></td>
+          <td><%= link_to 'View Attendance', lecture_attendances_path(lecture),class:"button is-light" %></td>
+          <td><%= link_to 'Edit', edit_lecture_path(lecture), class:"button is-light" %></td>
+          <td><%= link_to 'Delete',lecture, method: :delete, data: { confirm: 'Are you sure? This will remove this lecture for all teachers' }, class:"button is-dark" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+ 
+
+  <br>
+
+    <%= link_to 'New Lecture', new_lecture_path, class:"button is-light" %>
+    <%= link_to 'Most Popular Lecture', lectures_most_popular_path, class:"button is-light"%>
+  <% else %>
+    <%= link_to "Please Sign in", user_session_path %><br />
+  <% end %>
+</div>

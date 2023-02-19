@@ -15,30 +15,30 @@ Below is the Swimlane diagram for AttendEase that shows the interaction between 
 
 
 ```
-                    +-----------+      +------------------+      +------------------------+
-                    |           |      | AttendEase Web   |      | Database/Server        |
-                    |  Teacher  |      | Application      |      |                        |
-                    |           |      |                  |      |                        |
-                    +-----------+      +------------------+      +------------------------+
-                    |               |                                |                    |
-                    | 1. Logs in and selects corresponding lecture  |                     |
-                    | --------------------------------------------->|                     |
-                    |               |  2. Displays corresponding                          |
-                    |               |     student roster for that lecture                 |
-                    |               | <---------------------------------------------------|
-                    | 3. Records attendance for selected students   |                     |
-                    | --------------------------------------------->|                     |
-                    |               |  4. Saves attendance information to database        |
-                    |               | <---------------------------------------------------|
-                    | 5. Makes changes to their lectures            |                     |
-                    | --------------------------------------------->|                     |
-                    |               |  6. Updates lecture information in the database     |
-                    |               | <---------------------------------------------------|
-                    | 7. Deletes lectures if no longer needed       |                     |
-                    | --------------------------------------------->|                     |
-                    |               |  8. Removes corresponding data from the database    |
-                    |               | <---------------------------------------------------|
-                    +---------------+                           +-------------------------+
+     +-----------+      +------------------+      +------------------------+
+     |           |      | AttendEase Web   |      | Database/Server        |
+     |  Teacher  |      | Application      |      |                        |
+     |           |      |                  |      |                        |
+     +-----------+      +------------------+      +------------------------+
+     |               |                                |                    |
+     | 1. Logs in and selects corresponding lecture  |                     |
+     | --------------------------------------------->|                     |
+     |               |  2. Displays corresponding                          |
+     |               |     student roster for that lecture                 |
+     |               | <---------------------------------------------------|
+     | 3. Records attendance for selected students   |                     |
+     | --------------------------------------------->|                     |
+     |               |  4. Saves attendance information to database        |
+     |               | <---------------------------------------------------|
+     | 5. Makes changes to their lectures            |                     |
+     | --------------------------------------------->|                     |
+     |               |  6. Updates lecture information in the database     |
+     |               | <---------------------------------------------------|
+     | 7. Deletes lectures if no longer needed       |                     |
+     | --------------------------------------------->|                     |
+     |               |  8. Removes corresponding data from the database    |
+     |               | <---------------------------------------------------|
+     +---------------+                           +-------------------------+               
 ```
 
 ## Usage

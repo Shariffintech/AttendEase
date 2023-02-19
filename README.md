@@ -3,14 +3,17 @@ AttendEase is a web-based attendance management application that allows teachers
 
 # Tech Stack
 The application is built using Ruby on Rails, JavaScript, HTML, and CSS.
+Database: PostgreSQL
 
-Features
+# Features
 Teachers can log attendance for students associated with corresponding lectures
 CRUD functions available to update student information, edit existing lectures, and delete lectures
 Teachers have access to make changes only to their lectures
 Students will not be able to log-in
 Swimlane
 Below is the Swimlane diagram for AttendEase that shows the interaction between teachers and the web application.
+
+
 ```
 +-----------+      +------------------+      +------------------------+
 |           |      | AttendEase Web   |      | Database/Server        |
@@ -45,15 +48,12 @@ Clone this repository to your local machine.
 
 Navigate to the project directory and run the following command to install dependencies:
 
-Copy code
 bundle install
 Migrate the database by running:
 
-Copy code
 rails db:migrate
 Start the Rails server:
 
-Copy code
 rails server
 Open your browser and navigate to http://localhost:3000/ to access the AttendEase web application.
 

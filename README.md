@@ -41,21 +41,16 @@ Below is the Swimlane diagram for AttendEase that shows the interaction between 
 +---------------+                                +-------------------------+
 ```
 
-Setup
-To run AttendEase on your local machine, follow the steps below:
+Usage
 
-Clone this repository to your local machine.
+To use AttendEase, simply navigate to the website URL provided by your school or institution. You will be prompted to log in with your teacher account.
 
-Navigate to the project directory and run the following command to install dependencies:
+Once logged in, you will be able to see a list of your lectures for the current semester. Click on the lecture that you would like to take attendance for.
 
-bundle install
-Migrate the database by running:
+The attendance page will display a list of all students registered for that lecture. Simply select the checkbox next to each student who is present and click the "Submit" button to save the attendance record. You can also make changes to your lectures by editing or deleting them as needed.
 
-rails db:migrate
-Start the Rails server:
-
-rails server
-Open your browser and navigate to http://localhost:3000/ to access the AttendEase web application.
+Contributions
+If you would like to contribute to AttendEase, please fork the repository and make your changes. Once you have tested your changes locally, submit a pull request and we will review your changes for inclusion in the main codebase.
 
 License
 This project is licensed under the MIT License. See the LICENSE file for details.

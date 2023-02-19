@@ -5,6 +5,8 @@ AttendEase is a web-based attendance management application that allows teachers
 The application is built using Ruby on Rails, JavaScript, HTML, and CSS.
 Database: PostgreSQL
 
+Todo("Add react.js front end")
+
 # Features
 Teachers can log attendance for students associated with corresponding lectures
 CRUD functions available to update student information, edit existing lectures, and delete lectures

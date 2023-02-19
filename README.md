@@ -41,7 +41,7 @@ Below is the Swimlane diagram for AttendEase that shows the interaction between 
 +---------------+                                +-------------------------+
 ```
 
-Usage
+## Usage
 
 To use AttendEase, simply navigate to the website URL provided by your school or institution. You will be prompted to log in with your teacher account.
 
